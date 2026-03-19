@@ -11,31 +11,21 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-name = "Servers"
-pageRef = "servers"
-pre = "list"
-weight = 11
-
-[[main]]
 name = "Discord"
 url = "https://discord.com/invite/FreMaZDFbB"
 pre = "discord"
 weight = 10
 
-[[main]]
-name = "Banned"
-pre = "shield"
-weight = 20
 
 [[main]]
 name = "Sourcebans"
-parent = "Banned"
+pre = "eye"
 url = "https://bans.friendgroupb.com/"
 weight = 21
 
 [[main]]
-name = "Appeal via Discord"
-parent = "Banned"
+name = "Appeal Ban via Discord"
+pre = "shield"
 url = "https://appeal.gg/FreMaZDFbB"
 weight = 22
 
