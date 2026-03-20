@@ -6,9 +6,9 @@ const icons = {
 };
 
 const gameOrder = ["Gmod", "CSS", "CS2"];
-const fetchUrl = "https://test3.tonkatsuki.com";
+const fetchUrl = "https://api2.friendgroupb.com";
 const discordUrl =
-  "https://discord.com/channels/399344695970496512/1292794891205738517/1292797521965482077"; // Discord link
+  "https://discord.com/channels/1481126945545785497/1481131607011360809/1483270987297587456";
 
 async function fetchData(url) {
   try {
