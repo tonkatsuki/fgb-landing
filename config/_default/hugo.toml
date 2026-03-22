@@ -1,7 +1,7 @@
 # -- Site Configuration --
 # Refer to the theme docs for more details about each of these parameters.
 # https://blowfish.page/docs/getting-started/
-title = "friend group b"
+title = "Friend Group B"
 theme = "blowfish" # UNCOMMENT THIS LINE
 baseURL = "/"
 defaultContentLanguage = "en"
