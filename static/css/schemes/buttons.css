@@ -1,0 +1,30 @@
+#game-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* #A1CD44 sale
+#5C7E10 install */
+
+#game-buttons .gb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000000;
+}
+
+#game-buttons .gb-btn--blue { background: #1783FF; }
+#game-buttons .gb-btn--green { background: #A1CD44; }
+
+@media (prefers-color-scheme: dark) {
+  #game-buttons .gb-btn { color: #ffffff; }
+  #game-buttons .gb-btn--blue { background: #5865F2; }
+  #game-buttons .gb-btn--green { background: #5C7E10; }
+}

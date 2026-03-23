@@ -1,0 +1,73 @@
+#server-widget {
+  font-family: sans-serif;
+  padding: 1.5rem 0;
+}
+
+#server-widget .sv-card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#server-widget .sv-row {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  gap: 16px;
+}
+
+#server-widget .sv-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+#server-widget .sv-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0 0 2px;
+}
+
+#server-widget .sv-map {
+  font-size: 13px;
+  color: #555555;
+  margin: 0;
+}
+
+#server-widget .sv-players {
+  background: #1783FF;
+  color: #000000;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#server-widget .sv-error,
+#server-widget .sv-loading {
+  font-size: 14px;
+  color: #555555;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  #server-widget .sv-name {
+    color: #ffffff;
+  }
+
+  #server-widget .sv-map {
+    color: #aaaaaa;
+  }
+
+  #server-widget .sv-players {
+    background: #5C7E10;;
+    color: #ffffff;
+  }
+
+  #server-widget .sv-error,
+  #server-widget .sv-loading {
+    color: #aaaaaa;
+  }
+}
