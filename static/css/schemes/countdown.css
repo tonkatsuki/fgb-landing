@@ -18,11 +18,24 @@
   padding: 8px 14px;
   border-width: 1px;
   border-style: solid;
+}
+
+#countdown-widget .gn-badge--next {
   border-color: #36313179;
   background: #ECFDF5;
   color: #000000;
 }
 
+#countdown-widget .gn-badge--live {
+  background: #22c55ec4;
+  border-color: #16a34ad3;
+  color: #ffffff;
+}
+
+@keyframes live-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.6); }
+  50%       { box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
+}
 #countdown-widget .gn-tiles {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -56,13 +69,19 @@
     border-color: rgba(255, 255, 255, 0.15);
   }
 
-  #countdown-widget .gn-badge {
-    background: #11161e87;
-    color: #ffffff;
-  }
+  #countdown-widget .gn-badge--next {
+      background: #11161e87;
+      color: #ffffff;
+      border-color: #36313179;
+    }
 
-  #countdown-widget .gn-tile {
+  #countdown-widget .gn-badge--live {
+    background: #16a34ace;
+    border-color: #16a34a9c;
+    color: #ffffff;
+    animation: live-pulse 1.5s ease-in-out infinite;
   }
+  
 
   #countdown-widget .gn-num {
     color: #ffffff;

@@ -45,12 +45,14 @@
     const label = document.getElementById('top-label');
 
     if (target === 'live') {
+      label.className = 'gn-badge gn-badge--live';
       label.textContent = "TTT Seeding Event Ongoing, Join Now!";
       document.getElementById('cd-days').textContent  = '00';
       document.getElementById('cd-hours').textContent = '00';
       document.getElementById('cd-mins').textContent  = '00';
       document.getElementById('cd-secs').textContent  = '00';
     } else {
+      label.className = 'gn-badge gn-badge--next';
       label.textContent = 'Next TTT Playdate';
       const s = Math.max(0, Math.floor((target - now) / 1000));
       document.getElementById('cd-days').textContent  = pad(Math.floor(s / 86400));
