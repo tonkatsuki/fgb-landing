@@ -16,6 +16,9 @@
   display: inline-block;
   border-radius: 4px;
   padding: 8px 14px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #36313179;
   background: #ECFDF5;
   color: #000000;
 }
@@ -54,7 +57,7 @@
   }
 
   #countdown-widget .gn-badge {
-    background: #5C7E10;
+    background: #11161e87;
     color: #ffffff;
   }
 

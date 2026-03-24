@@ -19,12 +19,15 @@
   text-decoration: none;
   color: #000000;
 }
-
-#game-buttons .gb-btn--blue { background: #1783FF; }
-#game-buttons .gb-btn--green { background: #A1CD44; }
+#game-buttons .gb-btn--green {
+    background: linear-gradient(to bottom, #187fa4d5, #1a6484d5);
+  }
+#game-buttons .gb-btn--blue { background: #1783ffe0; }
 
 @media (prefers-color-scheme: dark) {
   #game-buttons .gb-btn { color: #ffffff; }
-  #game-buttons .gb-btn--blue { background: #5865F2; }
-  #game-buttons .gb-btn--green { background: #5C7E10; }
+  #game-buttons .gb-btn--blue { background: #5865f2d7; }
+  #game-buttons .gb-btn--green {
+    background: linear-gradient(to bottom, #187fa4d5, #1a6484d5);
+  }
 }

@@ -62,7 +62,10 @@
   }
 
   #server-widget .sv-players {
-    background: #5C7E10;;
+    background: #12171e42;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #36313179;
     color: #ffffff;
   }
 
