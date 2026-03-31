@@ -1,4 +1,4 @@
-const fetchUrl = "https://api2.friendgroupb.com";
+const fetchUrl = "https://api3.friendgroupb.com";
 
 async function fetchData(url) {
   try {
