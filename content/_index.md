@@ -9,7 +9,7 @@ showWordcount = false
 
 <link rel="stylesheet" href="css/schemes/buttons.css">
 <div id="game-buttons">
-  <a href="steam://connect/ttt.friendgroupb.com:27015?appid=4000" class="gb-btn gb-btn--green">
+  <a href="steam://connect/87.99.142.46" class="gb-btn gb-btn--green">
     {{< icon "steam" >}} Connect
   </a>
   <a href="https://discord.com/invite/FreMaZDFbB" class="gb-btn gb-btn--blue">
