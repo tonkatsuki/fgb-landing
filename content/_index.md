@@ -12,7 +12,7 @@ showWordcount = false
   <a href="steam://connect/87.99.142.46" class="gb-btn gb-btn--green">
     {{< icon "steam" >}} Connect
   </a>
-  <a href="https://discord.com/invite/FreMaZDFbB" class="gb-btn gb-btn--blue">
+  <a href="https://discord.gg/FreMaZDFbB" class="gb-btn gb-btn--blue">
     {{< icon "discord" >}} Discord
   </a>
 </div>
