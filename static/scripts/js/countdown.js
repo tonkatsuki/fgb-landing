@@ -46,7 +46,7 @@
 
     if (target === 'live') {
       label.className = 'gn-badge gn-badge--live';
-      label.textContent = "TTT Seeding Event Ongoing, Join Now!";
+      label.textContent = "TTT Night Ongoing, Join Now!";
       document.getElementById('cd-days').textContent  = '00';
       document.getElementById('cd-hours').textContent = '00';
       document.getElementById('cd-mins').textContent  = '00';
