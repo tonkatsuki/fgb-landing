@@ -53,7 +53,7 @@
       document.getElementById('cd-secs').textContent  = '00';
     } else {
       label.className = 'gn-badge gn-badge--next';
-      label.textContent = 'Next TTT Playdate';
+      label.textContent = 'Next TTT Play Session';
       const s = Math.max(0, Math.floor((target - now) / 1000));
       document.getElementById('cd-days').textContent  = pad(Math.floor(s / 86400));
       document.getElementById('cd-hours').textContent = pad(Math.floor((s % 86400) / 3600));
