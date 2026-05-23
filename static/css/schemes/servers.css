@@ -43,6 +43,12 @@
   font-weight: 500;
   white-space: nowrap;
   text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+#server-widget .sv-players:hover {
+  filter: brightness(1.1);
 }
 
 #server-widget .sv-error,
@@ -72,5 +78,135 @@
   #server-widget .sv-error,
   #server-widget .sv-loading {
     color: #aaaaaa;
+  }
+}
+
+/* Player list popout */
+
+#sv-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 999;
+}
+
+#sv-overlay.open {
+  display: block;
+}
+
+#sv-popout {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 260px;
+  height: 100%;
+  background: #ffffff;
+  border-left: 1px solid #e0e0e0;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.1);
+  transition: right 0.25s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+#sv-popout.open {
+  right: 0;
+}
+
+#sv-popout .sv-popout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+}
+
+#sv-popout .sv-popout-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555555;
+  padding: 0 2px;
+  line-height: 1;
+}
+
+#sv-popout .sv-popout-close:hover {
+  color: #000000;
+}
+
+#sv-popout .sv-popout-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+#sv-popout .sv-popout-player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 13px;
+}
+
+#sv-popout .sv-popout-name {
+  font-weight: 500;
+  color: #000000;
+}
+
+#sv-popout .sv-popout-score {
+  color: #555555;
+  font-size: 12px;
+}
+
+#sv-popout .sv-popout-empty {
+  padding: 24px 16px;
+  text-align: center;
+  color: #999999;
+  font-size: 13px;
+}
+
+@media (prefers-color-scheme: dark) {
+  #sv-overlay.open {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  #sv-popout {
+    background: #1a1a1a;
+    border-left-color: #2e2e2e;
+  }
+
+  #sv-popout .sv-popout-header {
+    border-bottom-color: #2e2e2e;
+    color: #ffffff;
+  }
+
+  #sv-popout .sv-popout-close {
+    color: #aaaaaa;
+  }
+
+  #sv-popout .sv-popout-close:hover {
+    color: #ffffff;
+  }
+
+  #sv-popout .sv-popout-player {
+    border-bottom-color: #252525;
+  }
+
+  #sv-popout .sv-popout-name {
+    color: #ffffff;
+  }
+
+  #sv-popout .sv-popout-score {
+    color: #aaaaaa;
+  }
+
+  #sv-popout .sv-popout-empty {
+    color: #666666;
   }
 }
