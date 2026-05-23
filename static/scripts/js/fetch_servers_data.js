@@ -115,7 +115,7 @@ function renderServer(data) {
   `;
 
   const badge = container.querySelector(".sv-players");
-  badge.style.background = playerCountColor(server.players, server.max_players);
+  badge.style.background = server.players > 0 ? playerCountColor(server.players, server.max_players) : "transparent";
   badge.addEventListener("click", () => openPopout(playerList));
   badge.addEventListener("keydown", e => {
     if (e.key === "Enter" || e.key === " ") openPopout(playerList);
