@@ -35,6 +35,7 @@
 }
 
 #server-widget .sv-players {
+  position: relative;
   background: #1783FF;
   color: #000000;
   border-radius: 4px;
@@ -49,6 +50,43 @@
 
 #server-widget .sv-players:hover {
   filter: brightness(1.1);
+}
+
+#server-widget .sv-players::before {
+  content: "Click to see players";
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.78);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 400;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 10;
+}
+
+#server-widget .sv-players::after {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.78);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+#server-widget .sv-players:hover::before,
+#server-widget .sv-players:hover::after {
+  opacity: 1;
 }
 
 #server-widget .sv-error,

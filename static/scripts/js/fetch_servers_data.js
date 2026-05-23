@@ -11,6 +11,26 @@ async function fetchData(url) {
   }
 }
 
+function playerCountColor(players, maxPlayers) {
+  const ratio = maxPlayers > 0 ? players / maxPlayers : 0;
+  const blue  = [23, 131, 255];
+  const green = [34, 197, 94];
+  const red   = [239, 68, 68];
+
+  let from, to, t;
+  if (ratio < 10 / 24) {
+    from = blue; to = green;
+    t = ratio / (10 / 24);
+  } else if (ratio < 17 / 24) {
+    return `rgb(${green[0]}, ${green[1]}, ${green[2]})`;
+  } else {
+    from = green; to = red;
+    t = (ratio - 17 / 24) / (1 - 17 / 24);
+  }
+
+  return `rgb(${Math.round(from[0] + t * (to[0] - from[0]))}, ${Math.round(from[1] + t * (to[1] - from[1]))}, ${Math.round(from[2] + t * (to[2] - from[2]))})`;
+}
+
 function formatDuration(seconds) {
   const h = Math.floor(seconds / 3600);
   const m = Math.floor((seconds % 3600) / 60);
@@ -95,6 +115,7 @@ function renderServer(data) {
   `;
 
   const badge = container.querySelector(".sv-players");
+  badge.style.background = playerCountColor(server.players, server.max_players);
   badge.addEventListener("click", () => openPopout(playerList));
   badge.addEventListener("keydown", e => {
     if (e.key === "Enter" || e.key === " ") openPopout(playerList);
