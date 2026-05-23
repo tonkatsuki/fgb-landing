@@ -9,7 +9,7 @@ showWordcount = false
 
 <link rel="stylesheet" href="css/schemes/buttons.css">
 <div id="game-buttons">
-  <a href="steam://connect/87.99.142.46" class="gb-btn gb-btn--green">
+  <a href="steam://connect/87.99.142.46" id="steam-connect-btn" class="gb-btn gb-btn--green">
     {{< icon "steam" >}} Connect
   </a>
   <a href="https://discord.gg/FreMaZDFbB" class="gb-btn gb-btn--blue">
@@ -25,6 +25,7 @@ showWordcount = false
   </div>
 </div>
 <script src="/scripts/js/fetch_servers_data.js"></script>
+<script src="/scripts/js/connect_modal.js"></script>
 
 <link rel="stylesheet" href="css/schemes/countdown.css">
 <div id="countdown-widget">

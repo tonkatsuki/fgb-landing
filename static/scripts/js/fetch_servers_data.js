@@ -22,13 +22,13 @@ function playerCountColor(players, maxPlayers) {
     from = blue; to = green;
     t = ratio / (10 / 24);
   } else if (ratio < 17 / 24) {
-    return `rgb(${green[0]}, ${green[1]}, ${green[2]})`;
+    return `rgba(${green[0]}, ${green[1]}, ${green[2]}, 0.8)`;
   } else {
     from = green; to = red;
     t = (ratio - 17 / 24) / (1 - 17 / 24);
   }
 
-  return `rgb(${Math.round(from[0] + t * (to[0] - from[0]))}, ${Math.round(from[1] + t * (to[1] - from[1]))}, ${Math.round(from[2] + t * (to[2] - from[2]))})`;
+  return `rgba(${Math.round(from[0] + t * (to[0] - from[0]))}, ${Math.round(from[1] + t * (to[1] - from[1]))}, ${Math.round(from[2] + t * (to[2] - from[2]))}, 0.8)`;
 }
 
 function formatDuration(seconds) {
