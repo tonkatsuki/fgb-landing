@@ -27,14 +27,27 @@
 }
 
 #countdown-widget .gn-badge--live {
-  background: #22c55ec4;
-  border-color: #16a34ad3;
+  background: linear-gradient(to bottom, #187fa4d5, #1a6484d5);
+  border-color: #1a6484d5;
+  color: #000000;
+  cursor: pointer;
+}
+
+#countdown-widget .gn-badge--live-discord {
+  background: #5865f2;
+  border-color: #4752c4;
   color: #ffffff;
+  cursor: pointer;
 }
 
 @keyframes live-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.6); }
-  50%       { box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(26, 100, 132, 0.6); }
+  50%       { box-shadow: 0 0 0 8px rgba(26, 100, 132, 0); }
+}
+
+@keyframes live-pulse-discord {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(88, 101, 242, 0.6); }
+  50%       { box-shadow: 0 0 0 8px rgba(88, 101, 242, 0); }
 }
 #countdown-widget .gn-tiles {
   display: grid;
@@ -76,10 +89,17 @@
     }
 
   #countdown-widget .gn-badge--live {
-    background: #16a34ace;
-    border-color: #16a34a9c;
+    background: linear-gradient(to bottom, #187fa4d5, #1a6484d5);
+    border-color: #1a6484d5;
     color: #ffffff;
     animation: live-pulse 1.5s ease-in-out infinite;
+  }
+
+  #countdown-widget .gn-badge--live-discord {
+    background: #5865f2cc;
+    border-color: #4752c4cc;
+    color: #ffffff;
+    animation: live-pulse-discord 1.5s ease-in-out infinite;
   }
   
 
