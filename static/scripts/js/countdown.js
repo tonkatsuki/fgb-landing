@@ -44,7 +44,8 @@
     if (!state) return;
 
     if (state.isLive) {
-      badge.className = 'gn-badge gn-badge--live';
+      const isDiscord = state.connectConfig && state.connectConfig.type === "discord";
+      badge.className = `gn-badge ${isDiscord ? 'gn-badge--live-discord' : 'gn-badge--live'}`;
       badge.textContent = `${state.eventName} @ ${state.eventLocation} LIVE! Join now!`;
       document.getElementById('cd-days').textContent  = '00';
       document.getElementById('cd-hours').textContent = '00';
@@ -67,7 +68,10 @@
   }
 
   document.getElementById('top-label').addEventListener('click', () => {
-    if (state && state.isLive && state.connectConfig && typeof openConnectModal === 'function') {
+    if (!state || !state.isLive || !state.connectConfig) return;
+    if (state.connectConfig.type === "discord") {
+      window.open(state.connectConfig.url, "_blank", "noopener");
+    } else if (typeof openConnectModal === 'function') {
       openConnectModal(state.connectConfig);
     }
   });
