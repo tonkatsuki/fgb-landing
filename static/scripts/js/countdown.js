@@ -52,9 +52,9 @@
       document.getElementById('cd-mins').textContent  = '00';
       document.getElementById('cd-secs').textContent  = '00';
     } else {
-      label.className = 'gn-badge gn-badge--next';
-      label.textContent = 'Next TTT Play Session';
-      const s = Math.max(0, Math.floor((target - now) / 1000));
+      badge.className = 'gn-badge gn-badge--next';
+      badge.textContent = `Next Event: ${state.eventName} @ ${state.eventLocation} in:`;
+      const s = Math.max(0, Math.floor((state.target - new Date()) / 1000));
       document.getElementById('cd-days').textContent  = pad(Math.floor(s / 86400));
       document.getElementById('cd-hours').textContent = pad(Math.floor((s % 86400) / 3600));
       document.getElementById('cd-mins').textContent  = pad(Math.floor((s % 3600) / 60));
