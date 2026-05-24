@@ -9,11 +9,6 @@
     },
   };
 
-  // Maps game name to a short display label
-  const GAME_LABELS = {
-    "Garry's Mod TTT": "TTT Night",
-  };
-
   let state = null;
 
   async function fetchEvent() {
@@ -31,7 +26,8 @@
     state = {
       isLive: event.event_status === "active",
       target: new Date(event.event_time),
-      label: GAME_LABELS[event.game] || event.event_name || "Event",
+      eventName: event.event_name,
+      eventLocation: event.event_location,
       connectConfig: EVENT_CONFIGS[event.event_location] || null,
     };
   }
@@ -44,14 +40,14 @@
 
     if (state.isLive) {
       badge.className = 'gn-badge gn-badge--live';
-      badge.textContent = `${state.label} Ongoing, Join Now!`;
+      badge.textContent = `${state.eventName} @ ${state.eventLocation} LIVE! Join now!`;
       document.getElementById('cd-days').textContent  = '00';
       document.getElementById('cd-hours').textContent = '00';
       document.getElementById('cd-mins').textContent  = '00';
       document.getElementById('cd-secs').textContent  = '00';
     } else {
       badge.className = 'gn-badge gn-badge--next';
-      badge.textContent = `Next ${state.label}`;
+      badge.textContent = `Next Event: ${state.eventName} @ ${state.eventLocation} in:`;
       const s = Math.max(0, Math.floor((state.target - new Date()) / 1000));
       document.getElementById('cd-days').textContent  = pad(Math.floor(s / 86400));
       document.getElementById('cd-hours').textContent = pad(Math.floor((s % 86400) / 3600));
