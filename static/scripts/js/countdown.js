@@ -4,8 +4,13 @@
   // Maps event_location to connect modal config
   const EVENT_CONFIGS = {
     "ttt.friendgroupb.com": {
+      type: "steam",
       steamUrl: "steam://connect/ttt.friendgroupb.com",
       consoleCmd: "connect ttt.friendgroupb.com",
+    },
+    "Discord": {
+      type: "discord",
+      url: "https://discord.gg/FreMaZDFbB",
     },
   };
 
