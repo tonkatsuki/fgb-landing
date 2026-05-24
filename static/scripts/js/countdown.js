@@ -64,4 +64,11 @@
 
   tick();
   setInterval(tick, 1000);
+
+  document.getElementById('top-label').addEventListener('click', () => {
+    const label = document.getElementById('top-label');
+    if (label.classList.contains('gn-badge--live') && typeof openConnectModal === 'function') {
+      openConnectModal();
+    }
+  });
 })();

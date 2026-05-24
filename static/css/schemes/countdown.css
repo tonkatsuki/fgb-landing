@@ -30,6 +30,7 @@
   background: #1394F0;
   border-color: #0f7acc;
   color: #ffffff;
+  cursor: pointer;
 }
 
 @keyframes live-pulse {
