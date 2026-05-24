@@ -27,14 +27,14 @@
 }
 
 #countdown-widget .gn-badge--live {
-  background: #22c55ec4;
-  border-color: #16a34ad3;
+  background: #1394F0;
+  border-color: #0f7acc;
   color: #ffffff;
 }
 
 @keyframes live-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.6); }
-  50%       { box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(19, 148, 240, 0.6); }
+  50%       { box-shadow: 0 0 0 8px rgba(19, 148, 240, 0); }
 }
 #countdown-widget .gn-tiles {
   display: grid;
@@ -76,8 +76,8 @@
     }
 
   #countdown-widget .gn-badge--live {
-    background: #16a34ace;
-    border-color: #16a34a9c;
+    background: #1394F0cc;
+    border-color: #0f7acccc;
     color: #ffffff;
     animation: live-pulse 1.5s ease-in-out infinite;
   }
