@@ -23,6 +23,13 @@ pre = "heart"
 weight = 15
 
 [[main]]
+name = "Map Collection"
+url = "https://workshop.friendgroupb.com"
+pre = "steam"
+weight = 17
+
+
+[[main]]
 name = "Sourcebans"
 pre = "eye"
 url = "https://bans.friendgroupb.com/"
