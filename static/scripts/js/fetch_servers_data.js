@@ -1,4 +1,4 @@
-const fetchUrl = "https://raw.githubusercontent.com/tonkatsuki/fgb-a2s-query/refs/heads/main/servers.json";
+const fetchUrl = "https://api3.friendgroupb.com";
 
 async function fetchData(url) {
   try {
